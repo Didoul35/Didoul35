@@ -1,0 +1,17 @@
+#!/bin/sh
+apt-get -y update 
+apt-get -y upgrade
+apt-get -y install apache2
+
+echo '<html>
+   <head>
+      <title>Serveur de Kévin</title>
+   </head>
+   <body>
+
+        <h1>$HOSTNAME</h1>
+        <p><img src=https://storage.googleapis.com/bucket_1_kevin_sdv/supdevinci-logo.png ></p>
+
+   </body>
+</html>
+' | sudo tee /var/www/html/index.html
